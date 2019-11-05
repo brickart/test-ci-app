@@ -1,0 +1,12 @@
+name: Tester CI
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v1
+      # This step references the directory that contains the action.
+      - uses: ./.github/actions/hello-world-action
